@@ -10,7 +10,7 @@
 using namespace std;
 
 //function to write each row. i.e. founders with SVs for a given gene
-void findStrain(vector<string>& tempList,vector<string> & strainList,string & geneName);
+void findStrain(vector<string>& tempList,vector<string> & strainList,string & geneName,map<string,string> & lenList);
 vector<string> splitField(string & str, char c);
 //vector<string> getIds(vector<string>& tempList); 
 void getIds(vector<string>& tempList,string & strain);//prints ids corresponding to a gene and strain str
@@ -26,12 +26,12 @@ int main(int argc, char * argv[])
 	//list of variables
 	vector<string> strainList,geneList,varList;
 	map<string,vector<string> > tempList;  
-	//map<string,vector<string> > idList;//holds ids for each gene
+	map<string,string> lenList;//a map of gene lengths. indices are gene names
 	string str;
 	vector<string> vs;
 	ifstream fstrain,fgene,ftable;
 	fstrain.open(argv[1]);
-	cout<<"Gene\t";
+	cout<<"Gene\tLength\t";
 	while(getline(fstrain,str))
 	{
 		strainList.push_back(str);
@@ -42,21 +42,16 @@ int main(int argc, char * argv[])
 	fgene.open(argv[2]);
 	while(getline(fgene,str))
 	{
-		geneList.push_back(str);
+		vs = splitField(str,'\t');
+		geneList.push_back(vs[0]);
+		lenList[vs[0]] = vs[1];
+		//cout<<vs[0]<<"\t"<<vs[1]<<endl;
 	}
 	fgene.close();
 	ftable.open(argv[3]);
 	while(getline(ftable,str))
 	{
 		varList.push_back(str);
-		//vs  = splitField(str,'\t');		
-		//cout<<vs[3]<<'\t'<<vs[5]<<endl;
-		//vs = splitField(vs[3],'|');
-		//for(unsigned int i=0;i<vs.size();i++)
-		//{
-		//	cout<<vs[i]<<'\t';
-		//}
-		//cout<<endl;
 	}
 	ftable.close();		
 	
@@ -73,14 +68,14 @@ int main(int argc, char * argv[])
 				//cout<<geneList[i]<<"\t"<<vs[5]<<endl;
 			}
 		}
-		findStrain(tempList[geneList[i]],strainList,geneList[i]);
+		findStrain(tempList[geneList[i]],strainList,geneList[i],lenList);
 		tempList.clear();
 	}	
 			
 	return 0;
 }
 //////////////////////////////////function to find the strains for a gene//////////////////////
-void findStrain(vector<string>& tempList,vector<string> & strainList,string & geneName)
+void findStrain(vector<string>& tempList,vector<string> & strainList,string & geneName,map<string,string> & lenList)
 {
 	string varLine;
 	string str;
@@ -91,7 +86,6 @@ void findStrain(vector<string>& tempList,vector<string> & strainList,string & ge
 		for(unsigned int j = 0;j<strainList.size();j++)
 		{
 			vs = splitField(tempList[i],'\t');
-			//if(tempList[i].find(strainList[j]) != string::npos) //the founder is there in the varLine
 			if(vs[3].find(strainList[j]) != string::npos)//look for the strain name in the strain field
 			{
 				strainGenotype[strainList[j]] = 1;
@@ -107,7 +101,7 @@ void findStrain(vector<string>& tempList,vector<string> & strainList,string & ge
 			}	
 		}
 	}
-	cout<<geneName<<'\t';//print the gene name. this is column 1
+	cout<<geneName<<'\t'<<lenList[geneName]<<'\t';//print the gene name. this is column 1
 	for(unsigned int i=0;i<strainList.size();i++)
 	{
 		if(strainGenotype[strainList[i]] == true)
