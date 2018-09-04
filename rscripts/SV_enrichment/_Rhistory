@@ -1,0 +1,512 @@
+svburden[[1]]
+length(svburden[[1]])
+table(lencats)
+t(sapply(svburden, summary))
+t(cbind(sapply(svburden, summary), table(lencats)))
+t(cbind(sapply(svburden, summary), table(lencats)))
+t(sapply(svburden, summary))
+table(lencats)
+t(table(lencats))
+cbind(table(lencats))
+t(sapply(svburden, summary))
+cbind(t(sapply(svburden, summary)))
+cbind(cbind(t(sapply(svburden, summary))), cbind(table(lencats)))
+colnames(svburdensummary)[7] <- 'n'
+svburdensummary <- cbind(cbind(t(sapply(svburden, summary))), cbind(table(lencats)))
+colnames(svburdensummary)[7] <- 'n'
+svburdensummary
+cuts <- c(0, Inf)
+lencats <- cut(x = dat$length, breaks = cuts, include.lowest = TRUE)
+svburden <- by(data = ans2, INDICES = lencats, FUN = function(xx) apply(X = xx, MARGIN = 2, function(x) sum(x > 0)/length(x)), simplify = TRUE)
+svburdensummary <- cbind(cbind(t(sapply(svburden, summary))), cbind(table(lencats)))
+colnames(svburdensummary)[7] <- 'n'
+svburdensummary
+dim(ans1)
+length(ans)
+length(ans1)
+ans1[[1]]
+head(dat)
+foo <- is.na(dat[,3:15])
+head(foo)
+foo <- !is.na(dat[,3:15])
+sum(rowSums(foo) > 0)
+sum(rowSums(foo) > 0)/nrow(foo)
+seq_along(svburden)
+length(svburden)
+svburden[[1]]
+seq_along(as.list(svburden))
+length(list(svburden))
+svburden[1]
+length(svburden[1])
+length(svburden[[1]])
+length(sapply(svburden, c))
+length(sapply(svburden, list))
+attr(svburden)
+attributes(svburden)
+cuts <- c(0, 2.5e3, 5e3, 1e4, 2e4, 35e3, 5e4, Inf)
+#cuts <- c(0, Inf)
+lencats <- cut(x = dat$length, breaks = cuts, include.lowest = TRUE)
+svburden <- by(data = ans2, INDICES = lencats, FUN = function(xx) apply(X = xx, MARGIN = 2, function(x) sum(x > 0)/length(x)), simplify = TRUE)
+length(svburden)
+seq_along(svburden)
+names(svburden)
+sapply(
+X = seq_along(svburden),
+FUN = function(y, n, i) cbind(n[[i]], y[[i]]),
+y = svburden, n = names(svburden)
+)
+flatsvburden <- sapply(
+X = seq_along(svburden),
+FUN = function(y, n, i) cbind(n[[i]], y[[i]]),
+y = svburden, n = names(svburden)
+)
+dim(flatsvburden)
+View(flatsvburden)
+cbind(1, letters)
+data.frame(foo = 1, bar = letters)
+flatsvburden[[1]]
+svburden[[1]]
+length(svburden[[1]])
+unlist(svburden[[1]])
+as.vector(unlist(svburden[[1]]))
+as.vector((svburden[[1]]))
+flatsvburden <- sapply(
+X = seq_along(svburden),
+FUN = function(y, n, i) cbind(n[[i]], as.vector(y[[i]])),
+y = svburden, n = names(svburden)
+)
+dim(flatsvburden)
+View(flatsvburden)
+View(t(flatsvburden))
+flatsvburden <- sapply(
+X = seq_along(svburden),
+FUN = function(y, n, i) data.frame(n[[i]], as.vector(y[[i]])),
+y = svburden, n = names(svburden)
+)
+dim(flatsvburden)
+flatsvburden
+flatsvburden <- sapply(
+X = seq_along(svburden),
+FUN = function(y, n, i) (as.vector(y[[i]])),
+y = svburden, n = names(svburden)
+)
+dim(flatsvburden)
+flatsvburden
+dim(svburden)
+dim(svburden[[1]])
+length(svburden[[1]])
+flatsvburden <- data.frame(
+lengths <- rep(names(svburden), each = length(svburden[[1]])),
+burden = sapply(
+X = seq_along(svburden),
+FUN = function(y, i) (as.vector(y[[i]])),
+y = svburden)
+)
+View(flatsvburden)
+flatsvburden <- data.frame(
+lengths = rep(names(svburden), each = length(svburden[[1]])),
+burden = sapply(
+X = seq_along(svburden),
+FUN = function(y, i) (as.vector(y[[i]])),
+y = svburden)
+)
+View(flatsvburden)
+flatsvburden <- data.frame(
+lengths = rep(names(svburden), each = length(svburden[[1]])),
+burden = as.vector(sapply(
+X = seq_along(svburden),
+FUN = function(y, i) (as.vector(y[[i]])),
+y = svburden))
+)
+View(flatsvburden)
+flatsvburden <- data.frame(
+lengths = rep(names(svburden), each = length(svburden[[1]])),
+burden = as.vector(sapply(
+X = seq_along(svburden),
+FUN = function(y, i) (as.vector(y[[i]])),
+y = svburden))
+)
+library(ggplot2)
+library(ggplot2)
+ggplot(flatsvburden, aes(x = burde, y = length)) + geom_density_ridges(scale = 5)
+library(ggridges)
+install.packages(ggridges)
+install.packages("ggridges")
+library(ggplot2)
+library(ggridges)
+ggplot(flatsvburden, aes(x = burde, y = length)) + geom_density_ridges(scale = 5)
+flatsvburden <- data.frame(
+Length = rep(names(svburden), each = length(svburden[[1]])),
+Burden = as.vector(sapply(
+X = seq_along(svburden),
+FUN = function(y, i) (as.vector(y[[i]])),
+y = svburden))
+)
+ggplot(flatsvburden, aes(x = Burden, y = Length)) + geom_density_ridges(scale = 5)
+ggplot(flatsvburden, aes(x = Burden, y = Length)) + geom_density_ridges(scale = 3)
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 3) +
+scale_y_discrete(expand = c(0.01, 0)) +
+theme_ridges()
+flatsvburden <- data.frame(
+Length = rep(names(svburden), each = length(svburden[[1]])),
+Burden = as.vector(sapply(
+X = seq_along(svburden),
+FUN = function(y, i) (as.vector(y[[i]])),
+y = svburden)),
+stringsAsFactors = FALSE
+)
+flatsvburden$Length <- with(faltsvburden, factor(x = Length, levels = lencats))
+flatsvburden$Length <- with(flatsvburden, factor(x = Length, levels = lencats))
+flatsvburden <- data.frame(
+Length = rep(names(svburden), each = length(svburden[[1]])),
+Burden = as.vector(sapply(
+X = seq_along(svburden),
+FUN = function(y, i) (as.vector(y[[i]])),
+y = svburden)),
+stringsAsFactors = FALSE
+)
+levels(lencats)
+flatsvburden$Length <- with(flatsvburden, factor(x = Length, levels = levels(lencats)))
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 3) +
+scale_y_discrete(expand = c(0.01, 0)) +
+theme_ridges()
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 2) +
+scale_y_discrete(expand = c(0.01, 0)) +
+theme_ridges()
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 2) +
+scale_y_discrete(expand = c(0.01, 0)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 2) +
+scale_y_discrete(expand = c(0.1, 0)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 2) +
+scale_y_discrete(expand = c(0, 0)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 2) +
+scale_y_discrete(expand = c(0, 1)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 2) +
+scale_y_discrete(expand = c(0, 10)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 3) +
+scale_y_discrete(expand = c(0, 10)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 5) +
+scale_y_discrete(expand = c(0, 10)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 5) +
+scale_y_discrete(expand = c(10, 10)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 5) +
+scale_y_discrete(expand = c(-10, 10)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 5) +
+scale_y_discrete(expand = c(1e-6, 10)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 5) +
+scale_y_discrete(expand = c(1, 10)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 5) +
+scale_y_discrete(expand = c(10, 0)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 5) +
+scale_y_discrete(expand = c(10, 10)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges(scale = 5) +
+scale_y_discrete(expand = c(0, 0)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges2(scale = 5) +
+scale_y_discrete(expand = c(0, 0)) +
+scale_x_continuous(expand = c(0, 0)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges2(scale = 5) +
+scale_y_discrete(expand = c(0, 0)) +
+scale_x_continuous(expand = c(0, 1)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges2(scale = 5) +
+scale_y_discrete(expand = c(0, 0)) +
+scale_x_continuous(expand = c(0, .1)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges2(scale = 5) +
+scale_y_discrete(expand = c(0, 0)) +
+scale_x_continuous(expand = c(0, 0.01)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges2(scale = 5) +
+scale_y_discrete(expand = c(0, 0)) +
+scale_x_continuous(expand = c(0, 0.03)) +
+theme_ridges() +
+NULL
+ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges2(scale = 5) +
+scale_y_discrete(expand = c(0, 0)) +
+scale_x_continuous(expand = c(0, 0.05)) +
+theme_ridges() +
+NULL
+svg(filename = '~/Desktop/burden.svg', width = 8, height = 3)
+print(p)
+dev.off()
+p <- ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges2(scale = 5) +
+scale_y_discrete(expand = c(0, 0)) +
+scale_x_continuous(expand = c(0, 0.05)) +
+theme_ridges() +
+NULL
+svg(filename = '~/Desktop/burden.svg', width = 8, height = 3)
+print(p)
+dev.off()
+svg(filename = '~/Desktop/burden.svg', width = 12, height = 3)
+print(p)
+dev.off()
+p2 <- ggplot(flatsvburden, aes(x = Burden, y = Length)) +
+geom_density_ridges_gradient(scale = 5) +
+scale_fill_viridis(name = "% Burden", option = "C") +
+scale_y_discrete(expand = c(0, 0)) +
+scale_x_continuous(expand = c(0, 0.05)) +
+theme_ridges() +
+NULL
+p2
+p2 <- ggplot(flatsvburden, aes(x = Burden, y = Length, fill = ..x..)) +
+geom_density_ridges_gradient(scale = 5) +
+scale_fill_viridis(name = "% Burden", option = "C") +
+scale_y_discrete(expand = c(0, 0)) +
+scale_x_continuous(expand = c(0, 0.05)) +
+theme_ridges() +
+NULL
+p2
+svg(filename = '~/Desktop/burden.svg', width = 12, height = 3)
+print(p2)
+dev.off()
+basedir <- '/Users/jje/Google Drive/DSPR_pacbio/Manuscript/Figures/Burden'
+dat <- read.table(paste(basedir, 'burden_table.08032018.txt', sep = '/'), header = TRUE)
+head(dat)
+colnames(dat)
+cbind(colnames(dat))
+ans2 <- sapply(ans1, function(x) sapply(x, sum))
+cuts <- c(0, 2.5e3, 5e3, 1e4, 2e4, 35e3, 5e4, Inf)
+#lengths <- read.table(paste(basedir, 'genes.lengths.txt', sep = '/'), header = TRUE)
+#dat <- subset(merge(x = lengths, y = dat), !grepl('5SrRNA', Gene) & length > 1e3 )
+dat <- subset(dat, !grepl('5SrRNA', Gene))
+dat <- read.table(paste(basedir, 'burden_table.08032018.txt', sep = '/'), header = TRUE)
+#lengths <- read.table(paste(basedir, 'genes.lengths.txt', sep = '/'), header = TRUE)
+#dat <- subset(merge(x = lengths, y = dat), !grepl('5SrRNA', Gene) & length > 1e3 )
+dat <- subset(dat, !grepl('5SrRNA', Gene))
+ans1 <- calcBurden(dat[,3:15], delim = ';')
+ans2 <- sapply(ans1, function(x) sapply(x, sum))
+save(ans1, file = paste(basedir, 'ans1.RData', sep = '/'))
+load(file = paste(basedir, 'ans1.RData', sep = '/'))
+ans2 <- sapply(ans1, function(x) sapply(x, sum))
+cuts <- c(0, 1e3, 2.5e3, 5e3, 1e4, 2e4, 35e3, 5e4, Inf)
+#cuts <- c(0, Inf)
+lencats <- cut(x = dat$length, breaks = cuts, include.lowest = TRUE)
+svburden <- by(data = ans2, INDICES = lencats, FUN = function(xx) apply(X = xx, MARGIN = 2, function(x) sum(x > 0)/length(x)), simplify = TRUE)
+source('~/Google Drive/DSPR_pacbio/Manuscript/Figures/Burden/overlap1.R', echo=TRUE)
+cuts <- c(0, 1e3, 2.5e3, 5e3, 1e4, 2e4, 35e3, 5e4, Inf)
+#cuts <- c(0, Inf)
+lencats <- cut(x = dat$length, breaks = cuts, include.lowest = TRUE)
+View(dat)
+#cuts <- c(0, Inf)
+lencats <- cut(x = dat$Length, breaks = cuts, include.lowest = TRUE)
+svburden <- by(data = ans2, INDICES = lencats, FUN = function(xx) apply(X = xx, MARGIN = 2, function(x) sum(x > 0)/length(x)), simplify = TRUE)
+flatsvburden <- data.frame(
+Length = rep(names(svburden), each = length(svburden[[1]])),
+Burden = as.vector(sapply(
+X = seq_along(svburden),
+FUN = function(y, i) (as.vector(y[[i]])),
+y = svburden)),
+stringsAsFactors = FALSE
+)
+flatsvburden$Length <- with(flatsvburden, factor(x = Length, levels = levels(lencats)))
+t(sapply(svburden, summary))
+svburdensummary <- cbind(cbind(t(sapply(svburden, summary))), cbind(table(lencats)))
+colnames(svburdensummary)[7] <- 'n'
+t(sapply(svburden, summary))
+t(sapply(svburdensummary, summary))
+t(sapply(svburde, summary))
+p2 <- ggplot(flatsvburden, aes(x = Burden, y = Length, fill = ..x..)) +
+geom_density_ridges_gradient(scale = 5) +
+scale_fill_viridis(name = "% Burden", option = "C") +
+scale_y_discrete(expand = c(0, 0)) +
+scale_x_continuous(expand = c(0, 0.05)) +
+theme_ridges() +
+NULL
+svg(filename = '~/Desktop/burden.svg', width = 10, height = 3)
+print(p2)
+dev.off()
+dim(dat)
+svg(filename = '~/Desktop/burden.svg', width = 8, height = 3)
+print(p2)
+dev.off()
+source('~/Google Drive/DSPR_pacbio/Manuscript/Figures/Burden/overlap1.R', echo=TRUE)
+p2 <- ggplot(flatsvburden, aes(x = Burden, y = Length, fill = ..x..)) +
+geom_density_ridges_gradient(scale = 5) +
+scale_fill_viridis(name = '% burden', option = 'C', labels = percent) +
+scale_y_discrete(expand = c(0, 0)) +
+scale_x_continuous(expand = c(0, 0.05), labels = percent) +
+theme_ridges() + ylab(label = 'gene span length') +
+xlab(label = '% genes burdened by structural variation per diploid') +
+#  ggtitle(label = 'distribution of diploid SV burden') +
+NULL
+cairo_pdf(filename = paste(basedir, 'burden.pdf', sep = '/'), width = 8, height = 3)
+print(p2)
+dev.off()
+svg(filename = paste(basedir, 'burden.svg', sep = '/'), width = 8, height = 3)
+print(p2)
+dev.off()
+p2 <- ggplot(flatsvburden, aes(x = Burden, y = Length, fill = ..x..)) +
+geom_density_ridges_gradient(scale = 5) +
+scale_fill_viridis(name = '% burden', option = 'C', labels = percent) +
+scale_y_discrete(expand = c(0, 0)) +
+scale_x_continuous(expand = c(0, 0.05), labels = percent) +
+theme_ridges() + ylab(label = 'gene span') +
+xlab(label = '% genes burdened by structural variation per diploid') +
+#  ggtitle(label = 'distribution of diploid SV burden') +
+NULL
+cairo_pdf(filename = paste(basedir, 'burden.pdf', sep = '/'), width = 8, height = 3)
+print(p2)
+dev.off()
+svg(filename = paste(basedir, 'burden.svg', sep = '/'), width = 8, height = 3)
+print(p2)
+dev.off()
+3.2*30
+View(ans2)
+table(lencats)
+0.989*2799
+(1-0.989)*2799
+(1-0.988)*2799
+(1-0.9885)*2799
+(1-0.9894)*2799
+basedir <- '/Users/jje/Google Drive/DSPR_pacbio/Manuscript/Figures/Burden'
+dat <- read.table(paste(basedir, 'burden_table.08032018.txt', sep = '/'), header = TRUE)
+head(dat)
+head(dat[,1:5])
+subset(dat, Gene == 'Cyp28d1')
+72/128
+1e6*1/1.56
+1062/1066
+1062/1064
+1063/1064
+21485637-21485538+1
+(12+144+20+6)/
+7
+((12+144+20+6)/7)+55
+2.54*c(4,6)
+library(ggplot2)
+library(viridis)
+rm(list = ls())
+setwd('/Users/jje/Google\ Drive/DSPR_pacbio/Manuscript/Figures/SV_enrichment/')
+binsamp <- function(start, end, size, poplen, popstate) {
+crit <- poplen >= start & poplen <= end
+n <- sum(crit)
+k <- sum(popstate[crit])
+#rbinom(n = 1, size = size, prob = k/n)
+rhyper(nn = 1, m = k, n = n-k, k = size)
+}
+binsampV <- Vectorize(FUN = binsamp, vectorize.args = c('start', 'end', 'size'))
+sampprob <- function(target, population, N = length(target), min = 1e-10) {
+fit <- density(x = target)
+mod <- smooth.spline(x = fit$x, y = fit$y)
+prob <- predict(population, object = mod)
+popfit <- density(x = population)
+popmod <- smooth.spline(x = popfit$x, y = popfit$y)
+popprob <- predict(population, object = popmod)
+ret <- prob$y/popprob$y
+ret[ret < 0] <- min
+return(ret)
+}
+dat <- read.table('sv_cand_lengthc.txt')
+datC <- subset(x = dat, V3 == 'C')
+datQ <- subset(x = dat, V3 == 'Q')
+sampleMat <- matrix(
+data = c(
+1111, 1510, 1,
+1523, 2528, 14,
+2583, 3281, 6,
+6284, 7283, 1,
+10231, 17561, 7,
+40102, 50101, 1,
+55605, 65604, 1,
+118436, 158435, 1
+), byrow = TRUE, nc = 3
+)
+#binsampx <- replicate(n = 1e5, binsampV(start = sampleMat[,1], end = sampleMat[,2], size = sampleMat[,3], poplen = datC$V4, popstate = datC$V2))
+binsampx <- as.matrix(read.table(file = 'montecarlo.txt', header = FALSE, colClasses = 'numeric'))
+#binsampx <- replicate(n = 1e5, binsampV(start = sampleMat[,1], end = sampleMat[,2], size = sampleMat[,3], poplen = datC$V4, popstate = datC$V2))
+binsampx <- as.matrix(read.table(file = 'montecarlo2.txt', header = FALSE, colClasses = 'numeric'))
+samptab <- table(colSums(binsampx))
+cols <- rep('gray', length(samptab))
+cols[as.numeric(names(samptab)) >= sum(datQ$V2)] <- 'red'
+#write.table(x = binsampx, file = 'montecarlo2.txt', row.names = FALSE, col.names = FALSE)
+plottab <- data.frame(probability = samptab/sum(samptab), cat = ifelse(test = cols == 'gray', yes = 'lt', no = 'gte'))
+colnames(plottab)[1:2] <- c('num', 'probability')
+o <- sum(datQ$V2)
+e <- mean(colSums(binsampx))
+print(c(o, e, 100*(o-e)/e))
+print(sum(colSums(binsampx) >= sum(datQ$V2)))/ncol(binsampx)
+p <- ggplot(data = plottab) +
+geom_bar(aes(x = num, y = probability, fill = cat), stat = 'identity') +
+scale_x_discrete(name = 'number of candidate gene SVs in Monte Carlo sample', labels = levels(factor(plottab$num)), breaks = as.numeric(levels(factor(plottab$num)))) +
+theme_bw() +
+theme(legend.position = 'none') +
+scale_fill_manual(values = plasma(n = 4)[c(3,1)]) +
+ggtitle(label = 'enrichment of SVs in QTL candidate genes') +
+NULL
+svg(filename = 'sv_enrichment2.svg', width = 5, height = 3)
+print(p)
+dev.off()
+cairo_pdf(filename = 'sv_enrichment2.pdf', width = 4.5, height = 3)
+print(p)
+dev.off()
