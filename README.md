@@ -12,3 +12,5 @@ scripts: Contains scripts used to construct the variant table. All contains the 
 validation: contains the lists of randomly picked SVs that were manually inspected on the UCSC browser. 
 
 variants-raw: contains the svmu and Repeatmasker output for each strain.
+
+variant_data: contains the variants in a custom tab separated file and a vcf file.
